@@ -105,9 +105,9 @@ const Selectw = () => {
 <StyledView className=' h-screen p-2 flex justify-center pb-32'>
           <StyledView className=' bg-white p-2   rounded-lg pt-6 pb-6' style={{elevation: 10}}>
             <StyledText className='text-center font-medium text-3xl pb-16'>Choose your option</StyledText>
-            <StyledText className=' text-xl '>Convert from: </StyledText>
-            <StyledView className=" flex flex-row  p-2" >
-                <StyledView className='flex-1'>
+            <StyledText className=' pl-2 text-xl '>Convert from: </StyledText>
+            <StyledView className=" flex gap-4 flex-row p-2" >
+                <StyledView className='flex-1 border-2  border-black rounded-lg'>
                     <RNPickerSelect className="  "
                         placeholder={{ label: 'Select weight unit', color:"red", value: null }}
                         items={weightUnitOptions}
@@ -116,7 +116,7 @@ const Selectw = () => {
                     />
                 </StyledView>
                 <StyledView className=''>
-                    <StyledTextInput className='flex-3 border-2  border-black rounded-md p-2 '
+                    <StyledTextInput className='flex-3 border-2  border-black rounded-lg p-4 '
                       keyboardType="numeric"
                       placeholder='Enter value' 
                       onChangeText={(value) => setWeightValue(value)}>
@@ -125,9 +125,9 @@ const Selectw = () => {
             </StyledView>
 
 
-            <StyledText className=' text-xl'>Convert to: </StyledText>
+            <StyledText className=' pl-2 text-xl'>Convert to: </StyledText>
             <StyledView className="p-2" >
-                <StyledView className=''>
+                <StyledView className=' border-2  border-black rounded-lg'>
                     <RNPickerSelect
                         placeholder={{ label: 'Select weight unit', color:"red", value: null }}
                         items={weightUnitOptions}
