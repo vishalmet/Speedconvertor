@@ -2,7 +2,9 @@ import React from 'react';
 import {  Text,TouchableOpacity, Image, Button, TextInput, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { styled } from 'nativewind';
-import LinearGradient from 'react-native-linear-gradient';
+import { ImageBackground } from 'react-native';
+import bg from "../assets/bg.jpg";
+
 
 
 const  StyledView = styled(View);
@@ -27,19 +29,23 @@ const Main = () => {
     }
 
     return (
-        <StyledView className=' bg-green-100 h-screen flex justify-center pb-36'  >
-            <StyledText className='text-center text-2xl pb-8'>What do you want to convert?</StyledText>
+        <ImageBackground source={bg} style={{width: '100%', height: '100%'}}>
+        
+        <StyledView className=' h-screen flex justify-center pb-36'  >
+            <StyledText className='text-center text-white  text-3xl p-8'>What do you want to convert?</StyledText>
               <TouchableOpacity
-            style={{ backgroundColor: 'rgb(96, 187, 34)',  borderWidth: 1, borderColor: '#ffffff', borderRadius: 10, padding: 8, alignItems: 'center', elevation: 10, marginHorizontal: 72, marginTop: 20 }} onPress={navigateToweight}>
-            <StyledText className=' text-2xl text-white'>Weight ⚖️</StyledText>
+            style={{ backgroundColor: '#FFFFFF', borderRadius: 10, padding: 8, alignItems: 'center', elevation: 10, marginHorizontal: 72, marginTop: 20 }} onPress={navigateToweight}>
+            <StyledText className=' text-2xl '>Weight ⚖️</StyledText>
             </TouchableOpacity>     
             <TouchableOpacity
-            style={{ backgroundColor: 'orange', borderRadius: 10,  borderWidth: 1, borderColor: '#ffffff', padding: 8, alignItems: 'center', elevation: 10, marginHorizontal: 72, marginTop: 20 }} onPress={navigateTospeed}>
-            <StyledText className=' text-2xl text-white'>Speed ⌛</StyledText>
+            style={{ backgroundColor: '#FFFFFF', borderRadius: 10,  borderWidth: 1, borderColor: '#ffffff', padding: 8, alignItems: 'center', elevation: 10, marginHorizontal: 72, marginTop: 20 }} onPress={navigateTospeed}>
+            <StyledText className=' text-2xl'>Speed ⌛</StyledText>
             </TouchableOpacity>
             
 
         </StyledView>
+
+      </ImageBackground>
      );
 }
  
